@@ -1,0 +1,9 @@
+<h1>Other people say</h1>
+
+<ul>
+    {% for index in comments_list %}
+    <li>{{ index.name }} said "{{ index.comment_text }}"</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'polls:comments' %}">Submit another?</a>
