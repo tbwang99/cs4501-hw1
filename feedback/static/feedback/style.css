@@ -1,7 +1,7 @@
     body {
-        background: url("images/bg.gif");
-        background-position: right bottom;
-        background-repeat: repeat;
+        background: url("images/bg.gif"), url("images/bg.gif");
+        background-position: right bottom, left top;
+        background-repeat: no-repeat, no-repeat;
         background-size: 600px;
         height: 0;
         max-height: 500px;
@@ -21,7 +21,7 @@
     input[type=text] {
         width: 50px;
         border-radius: 4px;
-        background-color: black;
+        background-color: #00DB00;
         color: yellow;
         transition: ease-in-out, width .35s ease-in-out;
     }
