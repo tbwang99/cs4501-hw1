@@ -1,0 +1,44 @@
+    body {
+        background: url("images/bg.gif");
+        background-position: right bottom;
+        background-repeat: repeat;
+        background-size: 600px;
+        height: 0;
+        max-height: 500px;
+    }
+    
+    input {
+        background-color: red;
+        /* Green */
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    
+    input[type=text] {
+        width: 50px;
+        border-radius: 4px;
+        background-color: black;
+        color: yellow;
+        transition: ease-in-out, width .35s ease-in-out;
+    }
+    
+    input[type=text]:focus {
+        width: 500px;
+        background-color: red;
+        color: yellow;
+    }
+    
+    button {
+        background-color: red;
+        /* Green */
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }

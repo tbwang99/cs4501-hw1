@@ -25,13 +25,13 @@ SECRET_KEY = 'w_2las@(q0o&u=0zk7sq3_*j6(5$yhl@g-k1d+*25g=agtj#9%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hw1-big-mistake.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','hw1-big-mistake.herokuapp.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
+    'feedback.apps.FeedbackConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.views.generic import TemplateView
+from feedback.views import FeedbackView
 
 urlpatterns = [
+    path('', FeedbackView.as_view(template_name = "feedback/index.html") ),
     path('admin/', admin.site.urls),
-    path('polls/', include('polls.urls')),
+    path('feedback/', include('feedback.urls')),
 ]

@@ -1,0 +1,149 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'feedback/style.css' %}">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% block head %}
+    <title>Home</title>
+    {% endblock %}
+</head>
+<style>
+    body {
+        background-color: #00DB00;
+        color: #00DB00;
+        font-family: Algerian;
+    }
+    
+    button {
+        color: #00DB00;
+    }
+    
+    input {
+        color: #00DB00;
+    }
+    
+    .bounce {
+        position: fixed;
+        right: 25px;
+        top: 50px;
+        margin-top: -25px;
+        margin-left: -25px;
+        height: 50px;
+        width: 50px;
+        -webkit-animation: bounce 1s infinite;
+    }
+    
+    @-webkit-keyframes bounce {
+        0% {
+            right: 5px;
+        }
+        25%,
+        75% {
+            right: 10px;
+        }
+        50% {
+            right: 100px;
+        }
+        100% {
+            right: 0;
+        }
+    }
+</style>
+<center>
+    <h1><br><br><br>Feedback Form<br><br></h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="field4">(4)35.</label><br>
+        <input id="field4" type="text" name="field4" value="{{ field4_input }}"><br><br>
+        <label for="field3">92(3).</label><br>
+        <input id="field3" type="text" name="field3" value="{{ field3_input }}"><br><br>
+        <label for="field1">1(1)8.</label><br>
+        <input id="field1" type="text" name="field1" value="{{ field1_input }}"><br><br>
+        <br><br><br><br><button onmousedown='refresh();'>Help</button>
+        <input type="submit" value="Submit"><br><br><br><br>
+        <h1>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+        </h1>
+        <label for="field2">(2)37.</label><br>
+        <input id="field2" type="text" name="field2" value="{{ field2_input }}"><br><br>
+        <label for="name"> Who are you? </label><br>
+        <input id="name" type="text" name="name" value="{{ full_name }}"><br><br>
+    </form>
+    <br><br><br><br>
+    <button onmousedown='openThird();'>III</button>
+    <button onmousedown='openSecond();'>II</button>
+    <button onmousedown='openFirst();'>I</button>
+    <button onmousedown='openFourth();'>IIII</button>
+
+    <script>
+        if (confirm("Find the number within the parentheses and answer the prompt to that number correctly. There are more than three prompts, make sure you complete all of them correctly before hitting 'Submit'. If you answer any of the prompts incorrectly, the form will be cleared. Moving away from the prompts will automatically clear the form.")) {
+            txt = "OK";
+        } else {
+            location.reload();
+        }
+
+        function refresh() {
+            location.reload();
+        }
+
+        function openFirst() {
+            myWindow = window.open("", "", "width=200,height=100");
+            myWindow.document.open();
+            myWindow.document.write("<h3>the first one.</h3>");
+            myWindow.document.write("<p>Talk about your experience with cats.<p>");
+            myWindow.document.write("<p><small>Make sure to include 'cats' in your answer.</small></p>");
+            if (!myWindow.closed) {
+                location.reload();
+            }
+        }
+
+        function openSecond() {
+            myWindow = window.open("", "", "width=200,height=100");
+            myWindow.document.open();
+            myWindow.document.write("<h3>the second one.</h3>");
+            myWindow.document.write("<p>How much do you enjoy this website?<p>");
+            myWindow.document.write("<p><small>Make sure to enter a number between 501 and 1340.</small></p>");
+            if (!myWindow.closed) {
+                location.reload();
+            }
+        }
+
+        function openThird() {
+            myWindow = window.open("", "", "width=200,height=100");
+            myWindow.document.open();
+            myWindow.document.write("<h3>the third one.</h3>");
+            myWindow.document.write("<p>Do you like the creator of this site?<p>");
+            myWindow.document.write("<p><small>Make sure to include 'love' in your answer.</small></p>");
+            if (!myWindow.closed) {
+                location.reload();
+            }
+        }
+
+
+        function openFourth() {
+            myWindow = window.open("", "", "width=200,height=100");
+            myWindow.document.open();
+            myWindow.document.write("<h3>the fourth one.</h3>");
+            myWindow.document.write("<p>Would you ever come to this site again?<p>");
+            myWindow.document.write("<p><small>Make sure to include 'because' in your answer.</small></p>");
+            if (!myWindow.closed) {
+                location.reload();
+            }
+        }
+    </script>
+</center>
+<h1>
+    <br><br><br><br>
+</h1>
+<div class="bounce">
+    <center>Scroll down for more!</center>
+</div>

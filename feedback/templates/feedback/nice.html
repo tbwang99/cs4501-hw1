@@ -1,0 +1,58 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'feedback/style.css' %}">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% block head %}
+    <title>Home</title>
+    {% endblock %}
+</head>
+<style>
+    body {
+        background-color: #00DB00;
+        color: #00DB00;
+        font-family: Algerian;
+    }
+    
+    button {
+        color: #00DB00;
+    }
+    
+    input {
+        color: #00DB00;
+    }
+    
+    .bounce {
+        position: fixed;
+        right: 25px;
+        top: 50px;
+        margin-top: -25px;
+        margin-left: -25px;
+        height: 50px;
+        width: 50px;
+        -webkit-animation: bounce 1s infinite;
+    }
+    
+    @-webkit-keyframes bounce {
+        0% {
+            right: 5px;
+        }
+        25%,
+        75% {
+            right: 10px;
+        }
+        50% {
+            right: 100px;
+        }
+        100% {
+            right: 0;
+        }
+    }
+</style>
+<center>
+    <h1>
+        <br><br><br><br>
+    </h1>
+    <h1> You did it! </h1>
+</center>
