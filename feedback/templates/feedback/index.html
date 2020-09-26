@@ -11,16 +11,16 @@
 <style>
     body {
         background-color: #00DB00;
-        color: orange;
+        color: #00DB00;
         font-family: Algerian;
     }
     
     button {
-        color: orange;
+        color: #00DB00;
     }
     
     input {
-        color: orange;
+        color: #00DB00;
     }
     
     .bounce {
@@ -50,6 +50,7 @@
         }
     }
 </style>
+<p id="display">Time Left: </p><button id="start">Start</button>
 <center>
     <h1><br><br><br>Feedback Form<br><br></h1>
     <form method="post">
@@ -138,6 +139,31 @@
             if (!myWindow.closed) {
                 location.reload();
             }
+        }
+        var start = document.getElementById("start");
+        var dis = document.getElementById("display");
+        var finishTime;
+        var timerLength = 100;
+        var timeoutID;
+        dis.innerHTML = "Time Left: " + timerLength;
+
+        if (localStorage.getItem('myTime')) {
+            Update();
+        }
+        start.onclick = function() {
+            localStorage.setItem('myTime', ((new Date()).getTime() + timerLength * 1000));
+            if (timeoutID != undefined) window.clearTimeout(timeoutID);
+            Update();
+        }
+        $(document).ready(function() {
+            $("#mybutton").trigger("click");
+        });
+
+        function Update() {
+            finishTime = localStorage.getItem('myTime');
+            var timeLeft = (finishTime - new Date());
+            dis.innerHTML = "Time Left: " + Math.max(timeLeft / 1000, 0);
+            timeoutID = window.setTimeout(Update, 100);
         }
     </script>
 </center>
