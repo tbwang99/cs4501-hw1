@@ -56,11 +56,11 @@
     <form method="post">
         {% csrf_token %}
         <input type="submit" value="Send Form"><br><br><br><br>
-        <label for="field4">(3+5)/2</label><br>
+        <label for="field4">Question (3+5)/2:</label><br>
         <input id="field4" type="text" name="field4" value="{{ field4_input }}"><br><br>
-        <label for="field3">12-10+1</label><br>
+        <label for="field3">Question 12-10+1:</label><br>
         <input id="field3" type="text" name="field3" value="{{ field3_input }}"><br><br>
-        <label for="field1">92/46/2</label><br>
+        <label for="field1">Question 92/46/2:</label><br>
         <input id="field1" type="text" name="field1" value="{{ field1_input }}"><br><br><br><br>
         <button onmousedown='refresh();'>Help</button>
         <input type="submit" value="Submit"><br><br><br><br>
@@ -75,9 +75,9 @@
             <br><br><br><br>
             <br><br><br><br>
         </h1>
-        <label for="field2">42*(1/21).</label><br>
+        <label for="field2">Question 42*(1/21):</label><br>
         <input id="field2" type="text" name="field2" value="{{ field2_input }}"><br><br>
-        <label for="name"> Who are you? </label><br>
+        <label for="name"> Question 5: Who are you? </label><br>
         <input id="name" type="text" name="name" value="{{ full_name }}"><br><br>
     </form>
     <br><br><br><br>
@@ -87,7 +87,7 @@
     <button onmousedown='openFourth();'>IIII</button>
 
     <script>
-        if (confirm("Each solution to the math equation is a prompt. If you answer any of the prompts incorrectly, you will need to redo the form. Get to the 'You did it!' page.")) {
+        if (confirm("Each solution to the math equation is the question number corresponding to a prompt. Within the fields, make sure to answer the prompt correctly. If you answer any of the prompts incorrectly, you will need to redo the form. Get to the 'You did it!' page to finish your task.")) {
             txt = "OK";
         }
 
@@ -98,7 +98,7 @@
         function openFirst() {
             myWindow = window.open("", "", "width=200,height=100");
             myWindow.document.open();
-            myWindow.document.write("<h3>the first one.</h3>");
+            myWindow.document.write("<h3>question 1.</h3>");
             myWindow.document.write("<p>Talk about your experience with cats.<p>");
             myWindow.document.write("<p><small>Make sure to include 'cats' in your answer.</small></p>");
             myWindow.document.close();
@@ -107,7 +107,7 @@
         function openSecond() {
             myWindow = window.open("", "", "width=200,height=100");
             myWindow.document.open();
-            myWindow.document.write("<h3>the second one.</h3>");
+            myWindow.document.write("<h3>question 2.</h3>");
             myWindow.document.write("<p>How much do you enjoy this website?<p>");
             myWindow.document.write("<p><small>Make sure to enter a number between 5340 and 5350.</small></p>");
             myWindow.document.close();
@@ -116,7 +116,7 @@
         function openThird() {
             myWindow = window.open("", "", "width=200,height=100");
             myWindow.document.open();
-            myWindow.document.write("<h3>the third one.</h3>");
+            myWindow.document.write("<h3>question 3.</h3>");
             myWindow.document.write("<p>Do you like the creator of this site?<p>");
             myWindow.document.write("<p><small>Make sure to include 'love' in your answer.</small></p>");
             myWindow.document.close();
@@ -126,7 +126,7 @@
         function openFourth() {
             myWindow = window.open("", "", "width=200,height=100");
             myWindow.document.open();
-            myWindow.document.write("<h3>the fourth one.</h3>");
+            myWindow.document.write("<h3>question 4.</h3>");
             myWindow.document.write("<p>Would you ever come to this site again?<p>");
             myWindow.document.write("<p><small>Make sure to include 'because' in your answer.</small></p>");
             myWindow.document.close();
