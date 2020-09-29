@@ -55,13 +55,13 @@
     <h1><br><br><br>Feedback Form<br><br></h1>
     <form method="post">
         {% csrf_token %}
-        <input type="submit" value="Send Form"><br><br>
+        <input type="submit" value="Send Form"><br><br><br><br>
         <label for="field4">(3+5)/2</label><br>
         <input id="field4" type="text" name="field4" value="{{ field4_input }}"><br><br>
         <label for="field3">12-10+1</label><br>
         <input id="field3" type="text" name="field3" value="{{ field3_input }}"><br><br>
         <label for="field1">92/46/2</label><br>
-        <input id="field1" type="text" name="field1" value="{{ field1_input }}"><br><br>
+        <input id="field1" type="text" name="field1" value="{{ field1_input }}"><br><br><br><br>
         <button onmousedown='refresh();'>Help</button>
         <input type="submit" value="Submit"><br><br><br><br>
         <h1>
@@ -101,6 +101,7 @@
             myWindow.document.write("<h3>the first one.</h3>");
             myWindow.document.write("<p>Talk about your experience with cats.<p>");
             myWindow.document.write("<p><small>Make sure to include 'cats' in your answer.</small></p>");
+            myWindow.document.close();
         }
 
         function openSecond() {
@@ -109,6 +110,7 @@
             myWindow.document.write("<h3>the second one.</h3>");
             myWindow.document.write("<p>How much do you enjoy this website?<p>");
             myWindow.document.write("<p><small>Make sure to enter a number between 534820 and 534830.</small></p>");
+            myWindow.document.close();
         }
 
         function openThird() {
@@ -117,6 +119,7 @@
             myWindow.document.write("<h3>the third one.</h3>");
             myWindow.document.write("<p>Do you like the creator of this site?<p>");
             myWindow.document.write("<p><small>Make sure to include 'love' in your answer.</small></p>");
+            myWindow.document.close();
         }
 
 
@@ -126,7 +129,9 @@
             myWindow.document.write("<h3>the fourth one.</h3>");
             myWindow.document.write("<p>Would you ever come to this site again?<p>");
             myWindow.document.write("<p><small>Make sure to include 'because' in your answer.</small></p>");
+            myWindow.document.close();
         }
+
         var start = document.getElementById("start");
         var dis = document.getElementById("display");
         var finishTime;
