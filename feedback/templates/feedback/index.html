@@ -55,7 +55,6 @@
     <h1><br><br><br>Feedback Form<br><br></h1>
     <form method="post">
         {% csrf_token %}
-        <input type="submit" value="Send Form"><br><br>
         <label for="field4">(3+5)/2</label><br>
         <input id="field4" type="text" name="field4" value="{{ field4_input }}"><br><br>
         <label for="field3">12-10+1</label><br>
