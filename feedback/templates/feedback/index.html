@@ -50,17 +50,16 @@
         }
     }
 </style>
-<p id="display">Time Left: </p><button id="start">Start</button>
 <center>
     <h1><br><br><br>Feedback Form<br><br></h1>
     <form method="post">
         {% csrf_token %}
         <input type="submit" value="Send Form"><br><br>
-        <label for="field4">(3+5)/2.</label><br>
+        <label for="field4">(3+5)/2</label><br>
         <input id="field4" type="text" name="field4" value="{{ field4_input }}"><br><br>
-        <label for="field3">12-10+1.</label><br>
+        <label for="field3">12-10+1</label><br>
         <input id="field3" type="text" name="field3" value="{{ field3_input }}"><br><br>
-        <label for="field1">92/46/2.</label><br>
+        <label for="field1">92/46/2</label><br>
         <input id="field1" type="text" name="field1" value="{{ field1_input }}"><br><br>
         <button onmousedown='refresh();'>Help</button>
         <input type="submit" value="Submit"><br><br><br><br>
@@ -87,7 +86,7 @@
     <button onmousedown='openFourth();'>IIII</button>
 
     <script>
-        if (confirm("Each math equation is a prompt. If you answer any of the prompts incorrectly, you will need to redo the form. Get to the 'You did it!' page.")) {
+        if (confirm("Each solution to the math equation is a prompt. If you answer any of the prompts incorrectly, you will need to redo the form. Get to the 'You did it!' page.")) {
             txt = "OK";
         } else {
             location.reload();
