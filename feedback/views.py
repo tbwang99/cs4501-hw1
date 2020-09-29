@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404, redirect, render
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.urls import reverse
 from django.template import loader
@@ -20,6 +20,6 @@ class FeedbackView(generic.CreateView):
         form = self.form_class(request.POST)
         if form.is_valid():
             # <process form cleaned data>
-            return HttpResponseRedirect('/feedback/nice/')
+            return redirect('/feedback/nice/')
 
         return render(request, self.template_name, {'form': form})
